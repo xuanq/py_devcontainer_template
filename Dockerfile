@@ -2,6 +2,7 @@ FROM python:3.10 as dev
 
 WORKDIR /workspaces
 COPY ./pyproject.toml ./poetry.lock* ./README.md ./
+COPY ./app/ ./app/
 
 ENV PIP_NO_CACHE_DIR=off \
     PIP_DISABLE_PIP_VERSION_CHECK=1 \
